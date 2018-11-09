@@ -36,3 +36,15 @@ E:\Programacion BD\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\formProduc
 E:\Programacion BD\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\formProd_prove.FormProd_prove.resources
 E:\Programacion BD\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.FormProveedor.resources
 E:\Programacion BD\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.MDIProducto.resources
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\fromproveedorprodcuto1.exe.config
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.exe
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.pdb
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.csprojResolveAssemblyReference.cache
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\formCliente.FormCliente.resources
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\formCompra.FormCompra.resources
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\formProducto.FormProducto.resources
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\formProd_prove.FormProd_prove.resources
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.FormProveedor.resources
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.MDIProducto.resources
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.Properties.Resources.resources
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.csproj.GenerateResource.Cache
