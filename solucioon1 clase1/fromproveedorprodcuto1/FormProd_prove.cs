@@ -16,17 +16,15 @@ namespace formProd_prove
     public partial class FormProd_prove : Form
 
     {
-        logicaNegocioProd_prove lN = new logicaNegocioProd_prove();
+        
         public FormProd_prove()
         {
             InitializeComponent();
         }
-
-      
-
+        logicaNegocioProd_prove lN = new logicaNegocioProd_prove();
         private void FormProd_prove_Load(object sender, EventArgs e)
         {
-            logicaNegocioProd_prove lN = new logicaNegocioProd_prove();
+            
             txtid.Visible = false;
             lblidpp.Visible = false;
             dgvpp.DataSource = lN.ListarProd_prove();
@@ -34,7 +32,7 @@ namespace formProd_prove
 
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
-            logicaNegocioProd_prove lN = new logicaNegocioProd_prove();
+            
             List<prod_prove> lista = lN.BuscaProd_proveDatos(txtbuscar.Text);
             dgvpp.DataSource = lista;
         }
@@ -55,23 +53,47 @@ namespace formProd_prove
 
         private void btnGuardarpp_Click(object sender, EventArgs e)
         {
-
-            logicaNegocioProd_prove lN = new logicaNegocioProd_prove();
-
             try
             {
+                if ( btnGuardarpp.Text == "Guardar")
+                {
                 prod_prove objprod_prove = new prod_prove();
-                objprod_prove.precio = int.Parse(txtPrecio.Text);
+                objprod_prove.precio = float.Parse(txtPrecio.Text);
                 objprod_prove.cantidad =int.Parse( txtCantidad.Text);
 
 
                 if (lN.insertarProd_prove(objprod_prove) > 0)
                 {
                     MessageBox.Show("Agregado con exito!");
+                    dgvpp.DataSource = lN.ListarProd_prove();
                     txtPrecio.Text = "";
                     txtCantidad.Text = "";
+                    tabControl1.SelectedTab = tabPage2;
                 }
-                else { MessageBox.Show("Error al agregar prod_prove"); }
+                else { MessageBox.Show("Error al agregar producto_proveedor"); }
+                
+                }
+                if( btnGuardarpp.Text == "Actualizar")
+                {
+
+                    prod_prove objprodprove = new prod_prove();
+                    objprodprove.id_pp = Convert.ToInt32(txtid.Text);
+                    objprodprove.precio = float.Parse(txtPrecio.Text);
+                    objprodprove.cantidad = int.Parse(txtCantidad.Text);
+
+                    if (lN.EditarProd_prove(objprodprove) > 0)
+                    {
+                        MessageBox.Show("Actualizado con exito");
+                        dgvpp.DataSource = lN.ListarProd_prove();
+                        txtPrecio.Text = "";
+                        txtCantidad.Text = "";
+                        tabControl1.SelectedTab = tabPage2;
+                    }
+                    else { MessageBox.Show("Error al actualizar producto_proveedor"); }
+
+                    btnGuardarpp.Text = "Guardar";
+                }
+                
             }
             catch 
             {
@@ -79,59 +101,6 @@ namespace formProd_prove
             }
         }
 
-        private void btnGuardarpp_Click(object sender, EventArgs e)
-        {
-
-        logicaNegocioProd_prove lN = new logicaNegocioProd_prove();
-            prod_prove objprod_prove = new prod_prove();
-
-            try
-            {
-                if (btnGuardarpp.Text == "Guardar")
-                {
-
-                    objprod_prove.precio = int.Parse(txtPrecio.Text);
-                    objprod_prove.cantidad = int.Parse(txtCantidad.Text);
-                    
-
-                    if (lN.insertarProd_prove(objprod_prove) > 0)
-                    {
-                        MessageBox.Show("Agregado con exito!");
-                        dgvpp.DataSource = lN.ListarProd_prove();
-                        txtPrecio.Text = "";
-                        txtCantidad.Text = "";
-                        tabControl1.SelectedTab = tabPage2;
-                    }
-                    else { MessageBox.Show("Error al agregar prod_prove"); }
-                }
-                if (btnGuardarpp.Text == "Actualizar")
-                {
-
-                    objprod_prove.id_pp = Convert.ToInt32(txtid.Text);
-                    objprod_prove.precio = int.Parse(txtPrecio.Text);
-                    objprod_prove.cantidad = int.Parse(txtCantidad.Text);
-                    
-                }
-
-                if (lN.EditarProd_prove(objprod_prove) > 0)
-                {
-                    MessageBox.Show("Actualizado con exito");
-                    dgvpp.DataSource = lN.ListarProd_prove();
-                    txtPrecio.Text = "";
-                    txtCantidad.Text = "";
-                    tabControl1.SelectedTab = tabPage2;
-                }
-                else { MessageBox.Show("Error al actualizar prod_prove"); }
-
-                btnGuardarpp.Text = "Guardar";
-
-            }
-
-            catch
-            {
-                MessageBox.Show("Errorrrrrr!");
-            }
-        }
 
         private void btneliminarpp_Click(object sender, EventArgs e)
         {

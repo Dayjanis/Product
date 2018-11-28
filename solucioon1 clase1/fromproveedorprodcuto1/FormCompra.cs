@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using capaEntidades;
 using capaNegocio;
-using formCliente;
+
 
 namespace formCompra
 {
@@ -21,45 +21,9 @@ namespace formCompra
             InitializeComponent();
         }
 
-        private void btGuardar_Click(object sender, EventArgs e)
-        {
-            logicaNegocioCompra lN = new logicaNegocioCompra();
-
-            try
-            {
-                Compra objCompra = new Compra();
-                objCompra.fecha = txtfecha.Text;
-                objCompra.precioC = int.Parse(txtprecioC.Text);
-                objCompra.cantidad = int.Parse(txtcantidad.Text);
-
-                if (lN.insertarCompra(objCompra) > 0)
-                {
-                    MessageBox.Show("Agregado con éxito!");
-                    txtfecha.Text = "";
-                    txtprecioC.Text = "";
-                    txtcantidad.Text = "";
-                    FormCliente cliente = new FormCliente();
-                    cliente.Show();
-                    Hide();
-                }
-
-                else { MessageBox.Show("Error al agregar proveedor"); }
-            }
-            catch
-            {
-                MessageBox.Show("Errorrrrrrr");
-            }
-
-        }
-
-        private void btnguardarcom_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormCompra_Load(object sender, EventArgs e)
         {
-            logicaNegocioCompra lN = new logicaNegocioCompra();
+           
             txtID.Visible = false;
             lblidcompra.Visible = false;
             dgvcompra.DataSource = lN.ListarCompra();
@@ -67,7 +31,7 @@ namespace formCompra
 
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
-            logicaNegocioCompra lN = new logicaNegocioCompra();
+           
             List<Compra> lista = lN.BuscaCompraDatos(txtbuscar.Text);
             dgvcompra.DataSource = lista;
         }

@@ -15,53 +15,16 @@ namespace formCliente
 {
     public partial class FormCliente : Form
     {
-        logicaNegocioCliente lN = new logicaNegocioCliente();
+        
         public FormCliente()
         {
             InitializeComponent();
         }
-
-        private void btGuardar_Click(object sender, EventArgs e)
-        {
-            logicaNegocioCliente lN = new logicaNegocioCliente();
-
-            try
-            {
-                cliente objClientes = new cliente();
-                objClientes.nombres = txtNombres.Text;
-                objClientes.direccion = txtDireccion.Text;
-                objClientes.telefono = txtTelefono.Text;
-
-                if (lN.insertarCliente(objClientes) > 0)
-                {
-                    MessageBox.Show("Agregado con éxito!");
-                    txtNombres.Text = "";
-                    txtDireccion.Text = "";
-                    txtTelefono.Text = "";
-                }
-
-                else { MessageBox.Show("Error al agregar proveedor"); }
-            }
-            catch
-            {
-                MessageBox.Show("Errorrrrrrr");
-            }
-
-        }
-
-        private void btnguardarcom_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnguardarcli_Click(object sender, EventArgs e)
-        {
-
-        }
+        logicaNegocioCliente lN = new logicaNegocioCliente();
 
         private void FormCliente_Load(object sender, EventArgs e)
         {
-            logicaNegocioCliente lN = new logicaNegocioCliente();
+            
             txtid.Visible = false;
             lblid.Visible = false;
             dgvcliente.DataSource = lN.ListarClientes();
@@ -69,7 +32,7 @@ namespace formCliente
 
         private void txtbuscar_TextChanged(object sender, EventArgs e)
         {
-            logicaNegocioCliente lN = new logicaNegocioCliente();
+            
             List<cliente> lista = lN.BuscaClienteDatos(txtbuscar.Text);
             dgvcliente.DataSource = lista;
         }
@@ -91,14 +54,11 @@ namespace formCliente
 
         private void btnguardarcli_Click_1(object sender, EventArgs e)
         {
-            logicaNegocioCliente lN = new logicaNegocioCliente();
-            cliente objcliente = new cliente();
-
             try
             {
                 if (btnguardarcli.Text == "Guardar")
                 {
-
+                    cliente objcliente = new cliente();
                     objcliente.nombres = txtNombres.Text;
                     objcliente.direccion = txtDireccion.Text;
                     objcliente.telefono = txtTelefono.Text;
@@ -116,28 +76,28 @@ namespace formCliente
                 }
                 if (btnguardarcli.Text == "Actualizar")
                 {
-
+                    cliente objcliente = new cliente();
                     objcliente.idcliente = Convert.ToInt32(txtid.Text);
                     objcliente.nombres = txtNombres.Text;
                     objcliente.direccion = txtDireccion.Text;
                     objcliente.telefono = txtTelefono.Text;
+
+
+                    if (lN.EditarCliente(objcliente) > 0)
+                    {
+                        MessageBox.Show("Actualizado con exito");
+                        dgvcliente.DataSource = lN.ListarClientes();
+                        txtDireccion.Text = "";
+                        txtNombres.Text = "";
+                        txtTelefono.Text = "";
+                        tabControl1.SelectedTab = tabPage2;
+                    }
+                    else { MessageBox.Show("Error al actualizar cliente"); }
+
+                    btnguardarcli.Text = "Guardar";
+
                 }
-
-                if (lN.EditarCliente(objcliente) > 0)
-                {
-                    MessageBox.Show("Actualizado con exito");
-                    dgvcliente.DataSource = lN.ListarClientes();
-                    txtDireccion.Text = "";
-                    txtNombres.Text = "";
-                    txtTelefono.Text = "";
-                    tabControl1.SelectedTab = tabPage2;
-                }
-                else { MessageBox.Show("Error al actualizar cliente"); }
-
-                btnguardarcli.Text = "Guardar";
-
             }
-
             catch
             {
                 MessageBox.Show("Errorrrrrr!");

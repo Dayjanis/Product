@@ -48,3 +48,11 @@ C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedor
 C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.MDIProducto.resources
 C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.Properties.Resources.resources
 C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\obj\Debug\fromproveedorprodcuto1.csproj.GenerateResource.Cache
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\fromproveedorprodcuto1.exe
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\fromproveedorprodcuto1.pdb
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\capaEntidades.dll
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\capaNegocio.dll
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\capaDatos.dll
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\capaEntidades.pdb
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\capaNegocio.pdb
+C:\Users\Keyla Gonzalez\Documents\GitHub\Product\solucioon1 clase1\fromproveedorprodcuto1\bin\Debug\capaDatos.pdb
